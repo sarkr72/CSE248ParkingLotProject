@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShowReturnTicketController">
+   <children>
+      <Pane fx:id="pane" layoutX="-1.0" layoutY="-1.0" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" layoutX="208.0" layoutY="1.0" prefHeight="30.0" prefWidth="177.0" text="Return Ticket">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="textArea" editable="false" layoutX="165.0" layoutY="112.0" prefHeight="408.0" prefWidth="263.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextArea>
+            <Button layoutX="1.0" layoutY="1.0" mnemonicParsing="false" onAction="#goToLoggedIn" prefHeight="30.0" prefWidth="66.0" text="Back" />
+            <Button layoutX="246.0" layoutY="540.0" mnemonicParsing="false" onAction="#returnAndPay" prefHeight="30.0" prefWidth="96.0" text="Return &amp; Pay" />
+            <TextField fx:id="ticketNField" layoutX="200.0" layoutY="52.0" promptText="Enter ticket number">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Label fx:id="ticketNLabel" layoutX="200.0" layoutY="79.0" prefHeight="27.0" prefWidth="228.0" textFill="#e40e0e">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

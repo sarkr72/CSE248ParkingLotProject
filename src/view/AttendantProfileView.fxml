@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttendantProfileController">
+   <children>
+      <Pane fx:id="pane" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="profileTextArea" editable="false" layoutX="46.0" layoutY="98.0" prefHeight="386.0" prefWidth="495.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></TextArea>
+            <Label alignment="CENTER" layoutX="225.0" layoutY="3.0" prefHeight="27.0" prefWidth="107.0" text="Profile" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToLoggedIn" prefHeight="27.0" prefWidth="62.0" text="Back" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

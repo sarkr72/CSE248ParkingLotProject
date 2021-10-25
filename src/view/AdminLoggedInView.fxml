@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminLoggedInController">
+   <children>
+      <Pane fx:id="pane" layoutX="2.0" layoutY="2.0" prefHeight="600.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="167.0" layoutY="-2.0" prefHeight="37.0" prefWidth="252.0" text="Logged In">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" layoutX="13.0" layoutY="132.0" prefHeight="498.0" prefWidth="504.0">
+              <columns>
+                <TableColumn fx:id="attendantC" prefWidth="160.0" text="Attendant">
+                     <columns>
+                        <TableColumn fx:id="firstNameC" prefWidth="75.0" text="First Name" />
+                        <TableColumn fx:id="lastNameC" prefWidth="75.0" text="Last Name" />
+                     </columns>
+                  </TableColumn>
+                <TableColumn fx:id="arrivalTimeC" prefWidth="131.0" text="Arrival Time" />
+                  <TableColumn fx:id="departureTimeC" prefWidth="94.0" text="Departure Time" />
+                  <TableColumn fx:id="feeC" prefWidth="69.0" text="Fee" />
+                  <TableColumn fx:id="statusC" prefWidth="59.0" text="Status" />
+              </columns>
+            </TableView>
+            <Button fx:id="deleteBtn" layoutX="537.0" layoutY="254.0" mnemonicParsing="false" onAction="#deleteAttendant" prefHeight="31.0" prefWidth="65.0" text="Delete" />
+            <TextField fx:id="searchField" layoutX="50.0" layoutY="104.0" onAction="#searchAttendant" prefHeight="25.0" prefWidth="191.0" promptText="Search By Name" />
+            <Label fx:id="searchLabel" disable="true" layoutX="9.0" layoutY="105.0" prefHeight="25.0" prefWidth="45.0" text="Search:" />
+            <Label fx:id="deleteLabel" layoutX="524.0" layoutY="285.0" prefHeight="19.0" prefWidth="99.0" textFill="#da1717" />
+            <Button layoutX="525.0" layoutY="315.0" mnemonicParsing="false" onAction="#viewReceipts" prefHeight="31.0" prefWidth="99.0" text="View Receipts" />
+            <Label fx:id="viewReceiptLabel" layoutX="525.0" layoutY="346.0" prefHeight="25.0" prefWidth="110.0" textFill="#eb1d1d" />
+            <MenuButton layoutX="555.0" layoutY="20.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="Menu">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#createAttendant" text="Create Attendant" />
+                  <MenuItem mnemonicParsing="false" onAction="#parkMyCar" text="Park My Own Car" />
+                  <MenuItem mnemonicParsing="false" onAction="#returnMyCar" text="My Invoice" />
+                <MenuItem mnemonicParsing="false" onAction="#homePage" text="Log Out" />
+              </items>
+               <effect>
+                  <ColorAdjust brightness="-0.14" />
+               </effect>
+            </MenuButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

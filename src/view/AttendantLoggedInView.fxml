@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttendantLoggedInController">
+   <children>
+      <Pane fx:id="pane" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" layoutX="217.0" layoutY="1.0" prefHeight="32.0" prefWidth="155.0" text="Logged In">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="527.0" layoutY="8.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+            <MenuButton layoutX="9.0" layoutY="8.0" mnemonicParsing="false" text="Menu">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#showProfile" text="Profile">
+                     <graphic>
+                        <TextArea fx:id="attendantTextArea" disable="true" prefHeight="145.0" prefWidth="528.0" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#showTicket" text="Ticket">
+                     <graphic>
+                        <TextArea fx:id="ticketTextArea" disable="true" prefHeight="145.0" prefWidth="528.0" />
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#showReturnTicket" text="ReturnTicket">
+                     <graphic>
+                        <TextArea fx:id="returnTicketTextArea" disable="true" prefHeight="145.0" prefWidth="528.0" />
+                     </graphic></MenuItem>
+              </items>
+            </MenuButton>
+            <Label alignment="CENTER" layoutX="91.0" layoutY="33.0" prefHeight="200.0" prefWidth="452.0" text="WELCOME TO OUR PARKING LOT">
+               <font>
+                  <Font name="System Italic" size="28.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.2238095238095238">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.021299999207258224" green="0.7099999785423279" blue="0.46385812759399414" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8735632183908045">
+                           <color>
+                              <Color red="0.020999999716877937" green="0.2930484712123871" blue="0.699999988079071" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.020999999716877937" green="0.2930484712123871" blue="0.699999988079071" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button layoutX="139.0" layoutY="201.0" mnemonicParsing="false" onAction="#findParking" prefHeight="32.0" prefWidth="312.0" text="Click here to find parking" textFill="#1b0606">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <ListView fx:id="listView" layoutX="187.0" layoutY="253.0" prefHeight="281.0" prefWidth="215.0" visible="false" />
+            <TextField fx:id="plateNumberField" layoutX="177.0" layoutY="167.0" prefHeight="26.0" prefWidth="192.0" promptText="Enter plate number">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="stateF" editable="false" layoutX="377.0" layoutY="168.0" prefHeight="26.0" prefWidth="69.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
